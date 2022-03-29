@@ -1,7 +1,8 @@
 # Личный проект «Пинк» 
 
-* Студент: [Сергей Касымский](https://up.htmlacademy.ru/adaptive/25/user/2004553).
-* Наставник: `Неизвестно`.
+* Студент: [Сергей Касымский](https://up.htmlacademy.ru/htmlcss/33/user/2004553).
+* Наставник: [Андрей Ефимов](https://up.htmlacademy.ru/htmlcss/33/user/367335).
+
 
 ---
 
