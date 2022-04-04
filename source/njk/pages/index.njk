@@ -4,22 +4,28 @@
 
 {% block main %}
   <section class="promo">
-    <h1 class="visually-hidden">Приложение "Пинк"</h1>
+    <h1 class="visually-hidden">Приложение "Пинк".</h1>
     <b class="promo__lead-title">
       Взгляните на жизнь иначе!
     </b>
-    <a href="#" class="promo__link-download">
+    <a href="https://www.apple.com/ru/app-store/" class="promo__link-download">
       Скачать приложение
     </a>
     <ul class="promo__app-list">
       <li class="promo__app-list-item">
-        <a href="#" class="promo__app-link promo__app-link--apple"></a>
+        <a href="https://www.apple.com/ru/app-store/" class="promo__app-link promo__app-link--apple">
+          <span class="visually-hidden">Магазин приложений "Эпл".</span>
+        </a>
       </li>
       <li class="promo__app-list-item">
-        <a href="#" class="promo__app-link promo__app-link--adnroid"></a>
+        <a href="https://play.google.com/" class="promo__app-link promo__app-link--android">
+          <span class="visually-hidden">Магазин приложений "Гугл".</span>
+        </a>
       </li>
       <li class="promo__app-list-item">
-        <a href="#" class="promo__app-link promo__app-link--windows"></a>
+        <a href="https://www.microsoft.com/ru-ru/store/apps/windows" class="promo__app-link promo__app-link--windows">
+          <span class="visually-hidden">Магазин приложений "Майкрософт".</span>
+        </a>
       </li>
     </ul>
     <em class="promo__remark">
@@ -32,7 +38,7 @@
     </h2>
     <ul class="offer__advantage-list">
       <li class="offer__advantage-list-item">
-        <img src="" alt="Пример работы приложения" class="offer__advantage-image">
+        <img src="" alt="Пример работы приложения." class="offer__advantage-image">
         <h3 class="offer__advantage-title">
           Поднимает настроение
         </h3>
@@ -42,7 +48,7 @@
         </p>
       </li>
       <li class="offer__advantage-list-item">
-        <img src="" alt="Пример работы приложения" class="offer__advantage-image">
+        <img src="" alt="Пример работы приложения." class="offer__advantage-image">
         <h3 class="offer__advantage-title">
          Меняет мир вокруг
         </h3>
@@ -52,7 +58,7 @@
         </p>
       </li>
       <li class="offer__advantage-list-item">
-        <img src="" alt="Пример работы приложения" class="offer__advantage-image">
+        <img src="" alt="Пример работы приложения." class="offer__advantage-image">
         <h3 class="offer__advantage-title">
           Заводит новых друзей
         </h3>
@@ -70,12 +76,12 @@
       что положительный эффект от использования приложения
       длится целые сутки!
     </p>
-    <a href="#" class="offer__blurb-link">Узнать больше об исследовании</a>
+    <a href="#!" class="offer__blurb-link">Узнать больше об исследовании</a>
   </section>
   <section class="reviews">
+    <h2 class="visually-hidden">Отзывы о работе приложения.</h2>
     <ul class="reviews__list">
       <li class="reviews__list-item">
-        <h2 class="visually-hidden">Отзывы о работе приложения.</h2>
         <blockquote class="reviews__blockqoute">
           <p class="reviews__text">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на
@@ -84,6 +90,17 @@
           </p>
           <cite class="reviews__author">Николай Петров 25 лет, водитель трамвая</cite>
         </blockquote>
+      </li>
+    </ul>
+    <ul class="reviews__list-button">
+      <li class="reviews__list-item">
+        <button class="reviews__buttons"></button>
+      </li>
+      <li class="reviews__list-item">
+        <button class="reviews__buttons"></button>
+      </li>
+      <li class="reviews__list-item">
+        <button class="reviews__buttons"></button>
       </li>
     </ul>
   </section>
@@ -126,65 +143,79 @@
       <tbody class="tariffs__table-body">
         <tr class="tariffs__table-row">
           <th class="tariffs__head">Розовый фильтр</th>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--yes">
-              Да
+              <span class="visually-hidden">Да.</span>
             </p>
           </td>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--yes">
-              Да
+              <span class="visually-hidden">Да.</span>
             </p>
           </td>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--yes">
-              Да
+              <span class="visually-hidden">Да.</span>
             </p>
           </td>
         </tr>
         <tr class="tariffs__table-row">
           <th class="tariffs__head">Смайлики</th>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--no">
-              нет
+              <span class="visually-hidden">Нет.</span>
             </p>
           </td>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--yes">
-              Да
+              <span class="visually-hidden">Да.</span>
             </p>
           </td>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--yes">
-              Да
+              <span class="visually-hidden">Да.</span>
             </p>
           </td>
         </tr>
         <tr class="tariffs__table-row">
           <th class="tariffs__head">Комментарии</th>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--no">
-              нет
+              <span class="visually-hidden">Нет.</span>
             </p>
           </td>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--no">
-              нет
+              <span class="visually-hidden">Нет.</span>
             </p>
           </td>
-          <td class="tariffs__date">
+          <td class="tariffs__cell">
             <p class="tariffs__value tariffs__value--yes">
-              Да
+              <span class="visually-hidden">Да.</span>
             </p>
           </td>
         </tr>
       </tbody>
     </table>
+    <ul class="tariffs__list-button">
+      <li class="tariffs__list-item">
+        <button class="tariffs__buttons"></button>
+      </li>
+      <li class="tariffs__list-item">
+        <button class="tariffs__buttons"></button>
+      </li>
+      <li class="tariffs__list-item">
+        <button class="tariffs__buttons"></button>
+      </li>
+    </ul>
   </section>
   <section class="contacts">
-    <h2 class="contacts__feedback-title">
-      Остались вопросы? Свяжитесь с нами!
+    <h2 class="visually-hidden">
+      Раздел с обратной связью.
     </h2>
+    <p class="contacts__feedback">
+      Остались вопросы? Свяжитесь с нами!
+    </p>
     <ul class="contacts__list">
       <li class="contacts__list-item">
         <span class="contacts__choice">Звоните:</span>
@@ -202,7 +233,7 @@
         <span class="contacts__choice">
           Приезжайте в гости:
         </span>
-        <a href="#" class="contacts__link">
+        <a href="#!" class="contacts__link">
           ул. Большая Конюшенная, 19/8
         </a>
       </li>
