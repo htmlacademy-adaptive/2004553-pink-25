@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк > {{ title }}</title>
+    <title>HTML Academy: Пинк &gt; {{ title }}</title>
   </head>
   <body class="page">
     <header class="page-header page__header">
@@ -18,17 +18,17 @@
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#!">
+            <a class="nav__link {{ 'nav__link--current' if page == 'catalog' }}" href="catalog.html" {{ 'aria-current="page"' if page == 'catalog' }}>
               Фотографии
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#!">
+            <a class="nav__link {{ 'nav__link--current' if page == 'form' }}" href="form.html" {{ 'aria-current="page"' if page == 'form' }}>
               Конкурс
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#!">
+            <a class="nav__link" href="https://htmlacademy.ru">
               HTML Academy
             </a>
           </li>
