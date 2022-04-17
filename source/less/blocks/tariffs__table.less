@@ -1,0 +1,124 @@
+.tariffs {
+  padding: 23px 0;
+}
+
+
+.tariffs-wrapper {
+  overflow: hidden;
+  background-color: var(--color-gray-light);
+
+  &::before {
+    content: "";
+    display: block;
+    height: 34px;
+    margin: 0 -20px 75px;
+    background-image: linear-gradient(177deg, var(--color-white) 50%, var(--color-gray-light) 50%);
+  }
+}
+
+.tariffs__table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+
+  @media (max-width: 320px) {
+    transform: translateX(-213px);
+  }
+}
+
+.tariffs__head {
+  padding: 4px 95px 15px;
+  overflow: hidden;
+  background-color: var(--color-dark-blue);
+}
+
+.tariffs__head--central {
+  position: relative;
+  border-right: 2px solid var(--color-gray-light);
+  border-left: 2px solid var(--color-gray-light);
+}
+
+.tariffs__hit {
+  position: absolute;
+  top: 17px;
+  left: -27px;
+  padding: 2px 40px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  background-color: var(--color-pink);
+  transform: rotate(-45deg);
+}
+
+.tariffs__head--hidden {
+  display: none;
+}
+
+.tariffs__tariff-name {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.tariffs__tariff-price {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.tariffs__cell {
+  position: relative;
+  padding: 18px 20px 22px;
+  border: 2px solid var(--color-gray-light);
+  border-top: 0;
+
+  &::before {
+    content: attr(data-title);
+    text-transform: uppercase;
+  }
+}
+
+.tariffs__cell--head {
+  display: none;
+}
+
+.tariffs__value {
+  position: absolute;
+  top: 5px;
+  right: 16px;
+
+  &--yes {
+    width: 31px;
+    height: 21px;
+    background-image: url("../img/svg-icon/yes.svg");
+  }
+
+  &--no {
+    top: 2px;
+    right: 18px;
+    width: 27px;
+    height: 27px;
+    background-image: url("../img/svg-icon/no.svg");
+  }
+}
+
+.tariffs__switch-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 33px 20px 40px;
+  list-style: none;
+  background-color: var(--color-gray-light);
+}
