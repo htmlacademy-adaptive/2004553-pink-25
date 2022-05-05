@@ -8,10 +8,14 @@
   </head>
   <body class="page">
     <header class="page-header page__header">
-      <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-        <img class="logo__image" src="img/logo-pink.svg" alt="Логотип Pink">
-      </a>
-
+      <div class="header-wrapper">
+        <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+          <img class="logo__image" src="img/logo-pink.svg" alt="Логотип Pink">
+        </a>
+        <button class="nav-button" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
+      </div>
       <nav class="nav page-header__nav">
         <ul class="nav__list">
           <li class="nav__item">
@@ -36,6 +40,16 @@
           </li>
         </ul>
       </nav>
+      {% block header %}
+        <p class="header-bottom">
+          <b class="header-bottom__text">
+          Взгляните на жизнь <br> иначе!
+        </b>
+          <picture class="header-bottom-picture">
+            <img class="header-bottom-image" src="img/index/promo-app.png" alt="Фотография работа приложения">
+          </picture>
+        </p>
+      {% endblock %}
     </header>
 
     <main class="page-main page__main">
@@ -75,7 +89,7 @@
 
     <script>
       window.pinegladePP = {
-        breakpoints: [320, 660, 1200,]
+        breakpoints: [320, 660, 1200]
       };
     </script>
     <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>

@@ -2,13 +2,17 @@
 
 {% set title = 'Фотографии' %}
 
+{% block header %}
+  <h1 class="data-heading">
+    Фотографии пользователей
+  </h1>
+{% endblock %}
+
 {% block main %}
   <section class="data">
-    <h1 class="data__heading">
-      Фотографии пользователей
-    </h1>
-    <b class="data__text">
+    <b class="data__text data__text--catalog">
       Взгляните на фотографии, которые выкладывают пользователи!
+      <br>
       Видите, как не хватает ваших?
     </b>
     <ul class="photos">
