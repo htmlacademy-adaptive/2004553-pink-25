@@ -3,44 +3,56 @@
 {% set title = 'Главная' %}
 
 {% block main %}
+
   <section class="promo">
-    <h1 class="visually-hidden">Приложение "Пинк".</h1>
-    <b class="promo__lead-title">
-      Взгляните на жизнь иначе!
-    </b>
-    <a href="https://www.apple.com/ru/app-store/" class="promo__download-link">
+    {# <p class="promo__wrapper">
+      <b class="promo__lead-title">
+        Взгляните на жизнь <br> иначе!
+      </b>
+      <picture class="promo__picture">
+        <img class="promo__picture-image" src="img/index/promo-app.png" alt="Фотография работа приложения">
+      </picture>
+    </p> #}
+    <div class="promo__wrapper-bottom">
+      <h1 class="visually-hidden">Приложение "Пинк".</h1>
+      <a href="https://www.apple.com/ru/app-store/" class="promo__download-link">
       Скачать приложение
     </a>
-    <ul class="promo__app-list">
-      <li class="promo__app-item">
-        <a href="https://www.apple.com/ru/app-store/" class="promo__app-link promo__app-link--apple">
-          <span class="visually-hidden">Магазин приложений "Эпл".</span>
-        </a>
-      </li>
-      <li class="promo__app-item">
-        <a href="https://play.google.com/" class="promo__app-link promo__app-link--android">
-          <span class="visually-hidden">Магазин приложений "Гугл".</span>
-        </a>
-      </li>
-      <li class="promo__app-item">
-        <a href="https://www.microsoft.com/ru-ru/store/apps/windows" class="promo__app-link promo__app-link--windows">
-          <span class="visually-hidden">Магазин приложений "Майкрософт".</span>
-        </a>
-      </li>
-    </ul>
-    <em class="promo__remark">
-      Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-    </em>
+      <ul class="promo__app-list">
+        <li class="promo__app-item">
+          <a href="https://www.apple.com/ru/app-store/" class="promo__app-link promo__app-link--apple">
+            <span class="visually-hidden">Магазин приложений "Эпл".</span>
+          </a>
+        </li>
+        <li class="promo__app-item">
+          <a href="https://play.google.com/" class="promo__app-link promo__app-link--android">
+            <span class="visually-hidden">Магазин приложений "Гугл".</span>
+          </a>
+        </li>
+        <li class="promo__app-item">
+          <a href="https://www.microsoft.com/ru-ru/store/apps/windows" class="promo__app-link promo__app-link--windows">
+            <span class="visually-hidden">Магазин приложений "Майкрософт".</span>
+          </a>
+        </li>
+      </ul>
+      <em class="promo__remark">
+        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+      </em>
+    </div>
   </section>
 
   <section class="offer">
-    <h2 class="Visually-hidden">
+    <h2 class="visually-hidden">
       Раздел с преимуществами приложения.
     </h2>
-    <b class="offer__motto">
-      Устали от серости мегаполиса?
-      Нам есть, что вам предложить!
-    </b>
+    <p class="offer__motto">
+      <b class="offer__motto-text offer__motto-text">
+        Устали от серости мегаполиса?
+      </b>
+      <b class="offer__motto-text offer__motto-text--down">
+        Нам есть, что вам предложить!
+      </b>
+    </p>
     <ul class="offer__list">
       <li class="offer__item">
         <h3 class="offer__title">
@@ -49,7 +61,7 @@
         <img class="offer__image" src="https://via.placeholder.com/186x382" alt="Пример работы приложения." >
         <p class="offer__text">
           Приложение позволит вам победить осеннюю хандру
-          и депрессию буквально в несколько кликов!
+          и депрессию <br> буквально в несколько кликов!
         </p>
       </li>
       <li class="offer__item">
@@ -58,19 +70,19 @@
         </h3>
         <img class="offer__image" src="https://via.placeholder.com/186x382" alt="Пример работы приложения.">
         <p class="offer__text">
-        Сделайте снимок и украсьте его смайликом
-        или текстовой подписью, чтобы усилить эффект
+        Сделайте снимок и украсьте его <br> смайликом
+        или текстовой подписью, <br> чтобы усилить эффект
         </p>
       </li>
       <li class="offer__item">
         <h3 class="offer__title">
           Заводит новых друзей
         </h3>
-        <img class="offer__image" src="https://via.placeholder.com/186x382" alt="Пример работы приложения.">
         <p class="offer__text">
           Ставьте лайки, комментируйте,
           делитесь фотографиями с друзьямии заводите новых
         </p>
+        <img class="offer__image offer__image-mobile" src="img/index/hello-app.png" alt="Пример работы приложения.">
       </li>
       <li class="blurb offer__blurb">
         <h3 class="blurb__heading">
@@ -87,23 +99,25 @@
       </li>
     </ul>
   </section>
-  <section class="reviews">
+  <section class="reviews page-main__reviews">
     <h2 class="visually-hidden">Отзывы о работе приложения.</h2>
     <ul class="reviews__list">
       <li class="reviews__item">
         <blockquote class="reviews__blockqoute">
+          <cite class="reviews__author">
+            Николай Петров
+          </cite>
           <p class="reviews__text">
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на
-            привычные серые вещи! А еще я познакомился со своей будущей женой в
-            комментариях к выложенной фотографии!»
+            «Это приложение перевернуло мой мир <br> и позволило по-новому взглянуть на <br>
+            привычные серые вещи! А еще я <br> познакомился со своей будущей женой <br> в
+            комментариях к выложенной <br> фотографии!»
           </p>
-          <cite class="reviews__author">Николай Петров 25 лет, водитель трамвая</cite>
         </blockquote>
       </li>
     </ul>
     <ul class="switch-buttons reviews__switch-buttons">
       <li class="switch-buttons__item">
-        <button class="switch-buttons__button" type="button" aria-label="К отзыву 1"></button>
+        <button class="switch-buttons__button switch-buttons__button--active" type="button" aria-label="К отзыву 1"></button>
       </li>
       <li class="switch-buttons__item">
         <button class="switch-buttons__button" type="button" aria-label="К отзыву 2"></button>
@@ -115,165 +129,169 @@
   </section>
 
   <section class="tariffs">
-    <h2 class="visually-hidden">Тарифы.</h2>
-    <table class="tariffs__table">
-      <thead class="tariffs__table-head">
-        <tr class="tariffs__row">
-          <th scope="col">
-            <tr class="tariffs__table-row">
-              <th class="tariffs__head">
+    <div class="tariffs-wrapper">
+      <h2 class="visually-hidden">Тарифы.</h2>
+      <table class="tariffs__table">
+        <thead class="tariffs__table-head">
+          <tr class="tariffs__table-row">
+            <th class="tariffs__head tariffs__head--hidden">
+              <span class="visually-hidden">
+                Название тарифа.
+              </span>
+            </th>
+            <th class="tariffs__head" scope="col">
+              <p class="tariffs__tariff-name">
+                База
+              </p>
+              <p class="tariffs__tariff-price">
+                1,99 usd
+              </p>
+            </th>
+            <th class="tariffs__head tariffs__head--central" scope="col">
+              <span class="tariffs__hit">Хит</span>
+              <p class="tariffs__tariff-name">
+                Стандарт
+              </p>
+              <p class="tariffs__tariff-price">
+                3,99 usd
+              </p>
+            </th>
+            <th class="tariffs__head" scope="col">
+              <p class="tariffs__tariff-name">
+                Анлим
+              </p>
+              <p class="tariffs__tariff-price">
+                9,99 usd
+              </p>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="tariffs__table-body">
+          <tr class="tariffs__row">
+            <th class="tariffs__cell tariffs__cell--head" scope="row">
+              Розовый фильтр
+            </th>
+            <td class="tariffs__cell" data-title="Розовый фильтр">
+              <p class="tariffs__value tariffs__value--yes">
                 <span class="visually-hidden">
-                  Название тарифа.
+                  Да.
                 </span>
-              </th>
-              <th class="tariffs__head" scope="col">
-                <p class="tariffs__tariff-name">
-                  База
-                </p>
-                <p class="tariffs__tariff-price">
-                  1,99 USD
-                </p>
-              </th>
-              <th class="tariffs__head" scope="col">
-                <p class="tariffs__tariff-name">
-                  Стандарт
-                </p>
-                <p class="tariffs__tariff-price">
-                  3,99 USD
-                </p>
-              </th>
-              <th class="tariffs__head" scope="col">
-                <p class="tariffs__tariff-name">
-                  Анлим
-                </p>
-                <p class="tariffs__tariff-price">
-                  9,99 USD
-                </p>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="tariffs__table-body">
-            <tr class="tariffs__row">
-              <th class="tariffs__cell tariffs__cell--head" scope="row">
-                Розовый фильтр
-              </th>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--yes">
-                  <span class="visually-hidden">
-                    Да.
-                  </span>
-                </p>
-              </td>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--yes">
-                  <span class="visually-hidden">
-                    Да.
-                  </span>
-                </p>
-              </td>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--yes">
-                  <span class="visually-hidden">
-                    Да.
-                  </span>
-                </p>
-              </td>
-            </tr>
-            <tr class="tariffs__row">
-              <th class="tariffs__cell tariffs__cell--head" scope="row">
-                Смайлики
-              </th>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--no">
-                  <span class="visually-hidden">
-                    Нет.
-                  </span>
-                </p>
-              </td>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--yes">
-                  <span class="visually-hidden">
-                    Да.
-                  </span>
-                </p>
-              </td>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--yes">
-                  <span class="visually-hidden">
-                    Да.
-                  </span>
-                </p>
-              </td>
-            </tr>
-            <tr class="tariffs__row">
-              <th class="tariffs__cell tariffs__cell--head" scope="row">
-                Комментарии
-              </th>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--no">
-                  <span class="visually-hidden">
-                    Нет.
-                  </span>
-                </p>
-              </td>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--no">
-                  <span class="visually-hidden">
-                    Нет.
-                  </span>
-                </p>
-              </td>
-              <td class="tariffs__cell">
-                <p class="tariffs__value tariffs__value--yes">
-                  <span class="visually-hidden">
-                    Да.
-                  </span>
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <ul class="switch-buttons tariffs__switch-buttons">
-          <li class="switch-buttons__item">
-            <button class="switch-buttons__button" type="button" aria-label="К тарифу 1"></button>
-          </li>
-          <li class="switch-buttons__item">
-            <button class="switch-buttons__button" type="button" aria-label="К тарифу 2"></button>
-          </li>
-          <li class="switch-buttons__item">
-            <button class="switch-buttons__button" type="button" aria-label="К тарифу 3"></button>
-          </li>
-        </ul>
-      </section>
+              </p>
+            </td>
+            <td class="tariffs__cell" data-title="Розовый фильтр">
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Да.
+                </span>
+              </p>
+            </td>
+            <td class="tariffs__cell" data-title="Розовый фильтр">
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Да.
+                </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="tariffs__row">
+            <th class="tariffs__cell tariffs__cell--head" scope="row">
+              Смайлики
+            </th>
+            <td class="tariffs__cell" data-title="Смайлики">
+              <p class="tariffs__value tariffs__value--no">
+                <span class="visually-hidden">
+                  Нет.
+                </span>
+              </p>
+            </td>
+            <td class="tariffs__cell" data-title="Смайлики">
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Да.
+                </span>
+              </p>
+            </td>
+            <td class="tariffs__cell" data-title="Смайлики">
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Да.
+                </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="tariffs__row">
+            <th class="tariffs__cell tariffs__cell--head" scope="row">
+              Комментарии
+            </th>
+            <td class="tariffs__cell" data-title="Комментарии">
+              <p class="tariffs__value tariffs__value--no">
+                <span class="visually-hidden">
+                  Нет.
+                </span>
+              </p>
+            </td>
+            <td class="tariffs__cell" data-title="Комментарии">
+              <p class="tariffs__value tariffs__value--no">
+                <span class="visually-hidden">
+                  Нет.
+                </span>
+              </p>
+            </td>
+            <td class="tariffs__cell" data-title="Комментарии">
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Да.
+                </span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="switch-buttons tariffs__switch-buttons">
+      <li class="switch-buttons__item">
+        <button class="switch-buttons__button" type="button" aria-label="К тарифу 1"></button>
+      </li>
+      <li class="switch-buttons__item">
+        <button class="switch-buttons__button switch-buttons__button--active" type="button" aria-label="К тарифу 2"></button>
+      </li>
+      <li class="switch-buttons__item">
+        <button class="switch-buttons__button" type="button" aria-label="К тарифу 3"></button>
+      </li>
+    </ul>
+  </section>
 
-      <section class="contacts">
-        <h2 class="visually-hidden">
+  <section class="contacts">
+    <h2 class="visually-hidden">
           Контакты.
         </h2>
-        <p class="contacts__feedback">
+    <p class="contacts__feedback">
           Остались вопросы? Свяжитесь с нами!
         </p>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <span class="contacts__choice">Звоните:</span>
-            <a class="contacts__link" href="tel:+78125556666">
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <span class="contacts__choice">Звоните:</span>
+        <a class="contacts__link" href="tel:+78125556666">
               +7 (812) 555-66-66
             </a>
-          </li>
-          <li class="contacts__item">
-            <span class="contacts__choice">Пишите:</span>
-            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+      </li>
+      <li class="contacts__item">
+        <span class="contacts__choice">Пишите:</span>
+        <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
               mail@htmlacademy.ru
             </a>
-          </li>
-          <li class="contacts__item">
-            <span class="contacts__choice">
+      </li>
+      <li class="contacts__item">
+        <span class="contacts__choice">
               Приезжайте в гости:
             </span>
-            <a href="#!" class="contacts__link">
+        <a href="#!" class="contacts__link">
               ул. Большая Конюшенная, 19/8
             </a>
-          </li>
-        </ul>
-    </section>
-  {% endblock %}
+      </li>
+    </ul>
+    <div class="maps">
+
+    </div>
+  </section>
+{% endblock %}
