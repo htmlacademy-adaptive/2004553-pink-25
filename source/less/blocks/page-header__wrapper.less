@@ -1,0 +1,32 @@
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 17px;
+  background-color: var(--color-black-light);
+
+  @media @tablet {
+    padding: 43px 20px 40px;
+  }
+
+  @media @desktop {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.page__header--js .page-header__wrapper {
+  background-color: var(--color-dark-blue);
+}
+
+.page__header--js .nav-button {
+  display: block;
+}
+
+.page__header--js .nav__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+}

@@ -3,44 +3,6 @@
 {% set title = 'Главная' %}
 
 {% block main %}
-
-  <section class="promo">
-    {# <p class="promo__wrapper">
-      <b class="promo__lead-title">
-        Взгляните на жизнь <br> иначе!
-      </b>
-      <picture class="promo__picture">
-        <img class="promo__picture-image" src="img/index/promo-app.png" alt="Фотография работа приложения">
-      </picture>
-    </p> #}
-    <div class="promo__wrapper-bottom">
-      <h1 class="visually-hidden">Приложение "Пинк".</h1>
-      <a href="https://www.apple.com/ru/app-store/" class="promo__download-link">
-      Скачать приложение
-    </a>
-      <ul class="promo__app-list">
-        <li class="promo__app-item">
-          <a href="https://www.apple.com/ru/app-store/" class="promo__app-link promo__app-link--apple">
-            <span class="visually-hidden">Магазин приложений "Эпл".</span>
-          </a>
-        </li>
-        <li class="promo__app-item">
-          <a href="https://play.google.com/" class="promo__app-link promo__app-link--android">
-            <span class="visually-hidden">Магазин приложений "Гугл".</span>
-          </a>
-        </li>
-        <li class="promo__app-item">
-          <a href="https://www.microsoft.com/ru-ru/store/apps/windows" class="promo__app-link promo__app-link--windows">
-            <span class="visually-hidden">Магазин приложений "Майкрософт".</span>
-          </a>
-        </li>
-      </ul>
-      <em class="promo__remark">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </em>
-    </div>
-  </section>
-
   <section class="offer">
     <h2 class="visually-hidden">
       Раздел с преимуществами приложения.
@@ -50,91 +12,117 @@
         Устали от серости мегаполиса?
       </b>
       <b class="offer__motto-text offer__motto-text--down">
-        Нам есть, что вам предложить!
+        Нам есть, что вам<br>предложить!
       </b>
     </p>
-    <ul class="offer__list">
-      <li class="offer__item">
-        <h3 class="offer__title">
-          Поднимает настроение
-        </h3>
-        <img class="offer__image" src="https://via.placeholder.com/186x382" alt="Пример работы приложения." >
-        <p class="offer__text">
-          Приложение позволит вам победить осеннюю хандру
-          и депрессию <br> буквально в несколько кликов!
-        </p>
-      </li>
-      <li class="offer__item">
-        <h3 class="offer__title">
-          Меняет мир вокруг
-        </h3>
-        <img class="offer__image" src="https://via.placeholder.com/186x382" alt="Пример работы приложения.">
-        <p class="offer__text">
-        Сделайте снимок и украсьте его <br> смайликом
-        или текстовой подписью, <br> чтобы усилить эффект
-        </p>
-      </li>
-      <li class="offer__item">
-        <h3 class="offer__title">
-          Заводит новых друзей
-        </h3>
-        <p class="offer__text">
-          Ставьте лайки, комментируйте,
-          делитесь фотографиями с друзьямии заводите новых
-        </p>
-        <img class="offer__image offer__image-mobile" src="img/index/hello-app.png" alt="Пример работы приложения.">
-      </li>
-      <li class="blurb offer__blurb">
+    <div class="offer__wrapper">
+      <div class="container">
+        <ul class="offer__list">
+          <li class="offer__item">
+            <h3 class="offer__title">
+            Поднимает настроение
+          </h3>
+            <p class="offer__text">
+            Приложение позволит вам победить осеннюю хандру
+            и депрессию буквально в несколько кликов!
+          </p>
+            <picture class="offer__picture">
+              <source media="(min-width:980px) and (max-width:1200px)" srcset="img/index/feauters-1.png">
+              <source media="(min-width:660px) and (max-width:980px)" srcset="img/index/offer-tablet.png">
+              <img class="offer__image" src="img/index/hello-app.png" alt="Пример работы приложения.">
+            </picture>
+          </li>
+          <li class="offer__item">
+            <h3 class="offer__title">
+            Меняет мир вокруг
+          </h3>
+            <p class="offer__text">
+            Сделайте снимок и украсьте&nbsp;его смайликом
+            или&nbsp;текстовой подписью, чтобы усилить&nbsp;эффект
+          </p>
+            <picture class="offer__picture">
+              <source media="(min-width:980px) and (max-width:1200px)" srcset="img/index/feauters-2.png">
+              <source media="(min-width:660px) and (max-width:980px)" srcset="img/index/offer-tablet.png">
+              <img class="offer__image" src="img/index/hello-app.png" alt="Пример работы приложения.">
+            </picture>
+          </li>
+          <li class="offer__item">
+            <h3 class="offer__title">
+            Заводит новых друзей
+          </h3>
+            <p class="offer__text">
+            Ставьте лайки, комментируйте,
+            делитесь фотографиями с друзьями и&nbsp;заводите новых
+          </p>
+            <picture class="offer__picture">
+              <source media="(min-width:980px) and (max-width:1200px)" srcset="img/index/feauters-3.png">
+              <source media="(min-width:660px) and (max-width:980px)" srcset="img/index/offer-tablet.png">
+              <img class="offer__image offer__image-mobile" src="img/index/hello-app.png" alt="Пример работы приложения.">
+            </picture>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="blurb offer__blurb">
+      <div class="container container__blurb">
         <h3 class="blurb__heading">
           <strong>
-            Эффект на 24 часа!
+            Эффект на&nbsp;24&nbsp;часа!
           </strong>
         </h3>
         <p class="blurb__text">
           Британские ученые провели исследования и доказали,
-          что положительный эффект от использования приложения
-          длится целые сутки!
+          что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!
         </p>
         <a class="blurb__link" href="#!">Узнать больше об исследовании</a>
-      </li>
-    </ul>
+      </div>
+    </div>
   </section>
   <section class="reviews page-main__reviews">
-    <h2 class="visually-hidden">Отзывы о работе приложения.</h2>
-    <ul class="reviews__list">
-      <li class="reviews__item">
-        <blockquote class="reviews__blockqoute">
-          <cite class="reviews__author">
-            Николай Петров
-          </cite>
-          <p class="reviews__text">
-            «Это приложение перевернуло мой мир <br> и позволило по-новому взглянуть на <br>
-            привычные серые вещи! А еще я <br> познакомился со своей будущей женой <br> в
-            комментариях к выложенной <br> фотографии!»
-          </p>
-        </blockquote>
-      </li>
-    </ul>
-    <ul class="switch-buttons reviews__switch-buttons">
-      <li class="switch-buttons__item">
-        <button class="switch-buttons__button switch-buttons__button--active" type="button" aria-label="К отзыву 1"></button>
-      </li>
-      <li class="switch-buttons__item">
-        <button class="switch-buttons__button" type="button" aria-label="К отзыву 2"></button>
-      </li>
-      <li class="switch-buttons__item">
-        <button class="switch-buttons__button" type="button" aria-label="К отзыву 3"></button>
-      </li>
-    </ul>
+    <div class="container container__reviews">
+      <h2 class="visually-hidden">Отзывы о работе приложения.</h2>
+      <ul class="reviews__list">
+        <li class="reviews__item">
+          <blockquote class="reviews__blockqoute">
+            <cite class="reviews__author">
+              <span class="reviews__author-name">Николай Петров</span>
+              <span class="reviews__author-note">25 лет, водитель трамвая</span>
+            </cite>
+            <p class="reviews__text">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+              привычные серые вещи! А еще я познакомился со своей будущей женой в
+              комментариях к выложенной фотографии!»
+            </p>
+          </blockquote>
+        </li>
+      </ul>
+      <p class="slider-buttons">
+        <button class="slider-buttons__button slider-buttons__button--prev" type="button" aria-label="Предидущий слайд."></button>
+        <button class="slider-buttons__button slider-buttons__button--next" type="button" aria-label="Следующий слайд."></button>
+      </p>
+      <ul class="switch-buttons reviews__switch-buttons">
+        <li class="switch-buttons__item">
+          <button class="switch-buttons__button switch-buttons__button--active" type="button" aria-label="К отзыву 1"></button>
+        </li>
+        <li class="switch-buttons__item">
+          <button class="switch-buttons__button" type="button" aria-label="К отзыву 2"></button>
+        </li>
+        <li class="switch-buttons__item">
+          <button class="switch-buttons__button" type="button" aria-label="К отзыву 3"></button>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="tariffs">
     <div class="tariffs-wrapper">
       <h2 class="visually-hidden">Тарифы.</h2>
+      {# Временно отключу демонстрацию для JS разработчика #}
+      {# style="transform: translateX(-404px);" #}
       <table class="tariffs__table">
         <thead class="tariffs__table-head">
           <tr class="tariffs__table-row">
-            <th class="tariffs__head tariffs__head--hidden">
+            <th class="tariffs__head tariffs__head--hidden" scope="col">
               <span class="visually-hidden">
                 Название тарифа.
               </span>
@@ -262,36 +250,36 @@
   </section>
 
   <section class="contacts">
-    <h2 class="visually-hidden">
-          Контакты.
-        </h2>
-    <p class="contacts__feedback">
-          Остались вопросы? Свяжитесь с нами!
-        </p>
-    <ul class="contacts__list">
-      <li class="contacts__item">
-        <span class="contacts__choice">Звоните:</span>
-        <a class="contacts__link" href="tel:+78125556666">
-              +7 (812) 555-66-66
-            </a>
-      </li>
-      <li class="contacts__item">
-        <span class="contacts__choice">Пишите:</span>
-        <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
-              mail@htmlacademy.ru
-            </a>
-      </li>
-      <li class="contacts__item">
-        <span class="contacts__choice">
-              Приезжайте в гости:
-            </span>
-        <a href="#!" class="contacts__link">
-              ул. Большая Конюшенная, 19/8
-            </a>
-      </li>
-    </ul>
-    <div class="maps">
-
+    <div class="container">
+      <h2 class="visually-hidden">
+        Контакты.
+      </h2>
+      <p class="contacts__feedback">
+        Остались вопросы? <br> Свяжитесь с нами!
+      </p>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <span class="contacts__choice">Звоните:</span>
+          <a class="contacts__link" href="tel:+78125556666">
+            +7 (812) 555-66-66
+          </a>
+        </li>
+        <li class="contacts__item">
+          <span class="contacts__choice">Пишите:</span>
+          <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+            mail@htmlacademy.ru
+          </a>
+        </li>
+        <li class="contacts__item">
+          <span class="contacts__choice">
+            Приезжайте в гости:
+          </span>
+          <a href="#!" class="contacts__link">
+            ул. Большая <br> Конюшенная, 19/8
+          </a>
+        </li>
+      </ul>
     </div>
+    <div class="maps"></div>
   </section>
 {% endblock %}
