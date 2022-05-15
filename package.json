@@ -10,6 +10,7 @@
     "cssnano": "5.1.7",
     "del": "6.0.0",
     "eslint-config-htmlacademy": "5.1.2",
+    "gh-pages": "4.0.0",
     "gulp": "4.0.2",
     "gulp-eslint": "6.0.0",
     "gulp-html-bem-validator": "1.0.5",
@@ -33,13 +34,14 @@
     "terser": "5.12.1"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "lint": "npm run editorconfig && npm run stylelint",
-    "test": "cross-env NODE_ENV=test gulp test",
     "build": "cross-env NODE_ENV=production gulp build",
+    "deploy": "npm run build && gh-pages -d source",
+    "editorconfig": "editorconfig-cli",
+    "lint": "npm run editorconfig && npm run stylelint",
+    "postinstall": "npx browserslist@latest --update-db",
     "start": "cross-env NODE_ENV=development gulp",
-    "deploy": "gulp build && gh-pages -d build"
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "test": "cross-env NODE_ENV=test gulp test"
   },
   "browserslist": [
     "last 2 versions",
@@ -60,8 +62,5 @@
     "node": "^16"
   },
   "type": "module",
-  "pre-commit": "test",
-  "dependencies": {
-    "gh-pages": "^3.2.3"
-  }
+  "pre-commit": "test"
 }
