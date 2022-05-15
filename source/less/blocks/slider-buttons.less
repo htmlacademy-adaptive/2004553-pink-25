@@ -1,0 +1,52 @@
+.slider-buttons {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  @media @desktop {
+    display: flex;
+  }
+}
+
+.slider-buttons__button {
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 41px;
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 41px;
+    background-color: var(--color-dark-blue-30);
+  }
+
+  &:hover::before {
+    background-color: var(--color-dark-blue-60);
+  }
+
+  &:active::before {
+    background-color: var(--color-dark-blue-10);
+  }
+
+  &--next {
+    top: 212px;
+    right: 26px;
+
+    &::before {
+      mask-image: url("../img/index/next-arrow.svg");
+    }
+  }
+
+  &--prev {
+    top: 212px;
+    left: 14px;
+
+    &::before {
+      mask-image: url("../img/index/prev-arrow.svg");
+    }
+  }
+}

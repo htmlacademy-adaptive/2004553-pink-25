@@ -101,7 +101,6 @@
       mask-image: url("../img/svg-icon/catalog/crop.svg");
       width: 44px;
       height: 44px;
-      background-color: var(--color-pink);
     }
   }
 
@@ -131,19 +130,25 @@
   }
 }
 
-.upload__range {
-  display: none;
+.upload__item--active .upload__range {
+  position: absolute;
+  bottom: 32px;
+  left: 39px;
+  display: block;
+  width: calc(100% - 80px);
   height: 2px;
   background-color: var(--color-dark-blue);
   appearance: none;
+}
 
-  &--crop {
-    position: absolute;
-    bottom: 32px;
-    left: 38px;
-    display: block;
-    width: calc(100% - 80px);
+.upload__item--active .upload__button-edit {
+  &::before {
+    background-color: var(--color-pink);
   }
+}
+
+.upload__range {
+  display: none;
 }
 
 .upload__range::-webkit-slider-runnable-track {

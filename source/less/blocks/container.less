@@ -1,0 +1,49 @@
+.container {
+  @media @desktop {
+    width: 980px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.container__blurb {
+  @media @desktop {
+    position: relative;
+    box-sizing: border-box;
+    padding: 160px 40px 111px 390px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 68px;
+      left: 21px;
+      display: block;
+      width: 298px;
+      height: 345px;
+      background-image: url("../img/index/timer-big.svg");
+    }
+  }
+}
+
+.container__reviews {
+  @media @desktop {
+    position: relative;
+  }
+}
+
+.container__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media @tablet {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media @desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 0;
+  }
+}

@@ -1,5 +1,15 @@
 .promo {
   background-color: var(--color-black-blue);
+
+  @media @tablet {
+    background-color: transparent;
+  }
+
+  @media @desktop {
+    display: flex;
+    padding: 0 20px;
+    background-color: transparent;
+  }
 }
 
 .promo__wrapper {
@@ -31,7 +41,20 @@
 
 .promo__wrapper-bottom {
   padding: 28px 20px 0;
+
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0 5px;
+  }
+
+  @media @desktop {
+    padding: 5px 0 0;
+  }
 }
+
 
 .promo__download-link {
   display: block;
@@ -55,24 +78,47 @@
   &:active {
     color: var(--color-pink-30);
   }
+
+  @media @tablet {
+    width: 294px;
+    margin: 0 0 45px 15px;
+  }
+
+  @media @desktop {
+    width: 294px;
+    margin: 0;
+    padding: 15px 0 17px;
+    font-size: 21px;
+  }
 }
 
 .promo__app-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
+  margin-bottom: 5px;
   padding: 0;
   list-style: none;
+
+  @media @tablet {
+    margin: 0 0 16px 43px;
+  }
+
+  @media @desktop {
+    justify-content: flex-start;
+    margin: 69px 0 33px 29px;
+  }
 }
 
 .promo__app-item {
   padding: 0 15px;
 }
 
+
 .promo__app-link {
   display: block;
   width: 50px;
-  height: 60px;
+  height: 55px;
   background-repeat: no-repeat;
 
   &--apple {
@@ -100,4 +146,14 @@
   text-align: center;
   color: var(--color-white);
   font-style: normal;
+
+  @media @tablet {
+    padding: 18px 17px 31px;
+    font-size: 18px;
+  }
+
+  @media @desktop {
+    padding: 18px 0 31px;
+    font-size: 18px;
+  }
 }
