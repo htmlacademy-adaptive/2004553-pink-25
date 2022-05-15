@@ -1,0 +1,30 @@
+.offer__wrapper {
+  background-color: var(--color-gray-light);
+
+  @media @tablet {
+    padding: 0 20px 80px;
+  }
+
+  @media @desktop {
+    padding: 0 20px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 33px;
+    margin: 0 0 51px;
+    background-color: var(--color-white);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+
+    @media @tablet {
+      height: 51px;
+      margin: 0 0 24px;
+    }
+
+    @media @desktop {
+      height: 103px;
+      margin: 0 -130px 0;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.promo {
+  background-color: var(--color-black-blue);
+
+  @media @tablet {
+    background-color: transparent;
+  }
+
+  @media @desktop {
+    display: flex;
+    padding: 0 20px;
+    background-color: transparent;
+  }
+}
+
+.promo__wrapper {
+  margin: 0;
+  padding: 0;
+  background-image: url("/img/index/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: 660px) {
+    background-image: none;
+  }
+}
+
+.promo__lead-title {
+  display: block;
+  padding: 24px 20px 29px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.promo__picture-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.promo__wrapper-bottom {
+  padding: 28px 20px 0;
+
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0 5px;
+  }
+
+  @media @desktop {
+    padding: 5px 0 0;
+  }
+}
+
+
+.promo__download-link {
+  display: block;
+  width: 274px;
+  margin: 0 auto 31px;
+  padding: 15px 0 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--color-white);
+  text-decoration: none;
+  border: 3px solid var(--color-white);
+  border-radius: 29px;
+
+  &:hover {
+    color: var(--color-pink);
+    background-color: var(--color-white);
+  }
+
+  &:active {
+    color: var(--color-pink-30);
+  }
+
+  @media @tablet {
+    width: 294px;
+    margin: 0 0 45px 15px;
+  }
+
+  @media @desktop {
+    width: 294px;
+    margin: 0;
+    padding: 15px 0 17px;
+    font-size: 21px;
+  }
+}
+
+.promo__app-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 0;
+  list-style: none;
+
+  @media @tablet {
+    margin: 0 0 16px 43px;
+  }
+
+  @media @desktop {
+    justify-content: flex-start;
+    margin: 69px 0 33px 29px;
+  }
+}
+
+.promo__app-item {
+  padding: 0 15px;
+}
+
+
+.promo__app-link {
+  display: block;
+  width: 50px;
+  height: 55px;
+  background-repeat: no-repeat;
+
+  &--apple {
+    background-image: url("/img/app-logo/apple-logo.svg");
+    background-position: 84% 13%;
+  }
+
+  &--android {
+    background-image: url("/img/app-logo/android-logo.svg");
+    background-position: 65% 50%;
+  }
+
+  &--windows {
+    background-image: url("/img/app-logo/microsoft-logo.svg");
+    background-position: 50% 70%;
+  }
+}
+
+.promo__remark {
+  display: block;
+  padding: 18px 20px 31px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--color-white);
+  font-style: normal;
+
+  @media @tablet {
+    padding: 18px 17px 31px;
+    font-size: 18px;
+  }
+
+  @media @desktop {
+    padding: 18px 0 31px;
+    font-size: 18px;
+  }
+}

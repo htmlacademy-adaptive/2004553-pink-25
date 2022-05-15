@@ -1,0 +1,34 @@
+.maps {
+  height: 200px;
+  background-color: var(--color-gray);
+  background-image: url("../img/index/map.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media @tablet {
+    height: 373px;
+    background-image: url("../img/index/map-tablet.png");
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 66px;
+    background-color: var(--color-white);
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
+
+    @media @tablet {
+      height: 133px;
+    }
+
+    @media @desktop {
+      height: 206px;
+    }
+  }
+
+  @media @desktop {
+    height: 502px;
+    background-image: url("../img/index/map-desktop.png");
+  }
+}

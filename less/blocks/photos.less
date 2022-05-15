@@ -1,0 +1,133 @@
+.photos {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media @tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.photos__item {
+  margin-bottom: 20px;
+
+  &--panorama {
+    @media @tablet {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+.photos__mark {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 6px 20px 6px 19px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  background-color: var(--color-pink);
+
+  @media @tablet {
+    top: 57px;
+  }
+}
+
+.photos__quote {
+  margin: 0;
+  padding: 0 20px;
+
+  // @media @tablet {
+  //   padding: 0 10px;
+  // }
+}
+
+.photos__quote-wrapper {
+  position: relative;
+  padding: 18px 10px 7px 17px;
+  background-color: var(--color-gray-light);
+
+  // @media @tablet {
+  //   padding: 23px 17px 7px 30px;
+  // }
+
+  &--panorama {
+    @media @tablet {
+      padding: 24px 10px 24px 30px;
+    }
+  }
+}
+
+.photos__author-profile {
+  margin: 0;
+  padding: 0;
+}
+
+.photos__author-name {
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--color-dark-blue);
+  font-style: normal;
+}
+
+.photos__time {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--color-dark-blue);
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.photos__author-text {
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+  color: var(--color-dark-blue);
+}
+
+.photos__like {
+  display: block;
+  padding: 11px 32px 11px;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--color-pink);
+  text-transform: uppercase;
+
+  &--panorama {
+    @media @tablet {
+      position: absolute;
+      top: 14px;
+      right: 27px;
+    }
+  }
+}
+
+.photos__button {
+  width: 13px;
+  height: 14px;
+  background-color: transparent;
+  background-image: url("/img/svg-icon/heart.svg");
+  background-repeat: no-repeat;
+  border: none;
+
+  @media @mobile {
+    position: absolute;
+    top: -37px;
+    left: 37px;
+  }
+
+  @media @tablet {
+    position: absolute;
+    top: -91px;
+    right: 50px;
+  }
+}
+
+.photos__form {
+  position: relative;
+}

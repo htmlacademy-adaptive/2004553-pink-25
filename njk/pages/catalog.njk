@@ -1,0 +1,305 @@
+{% extends "_layout.njk" %}
+
+{% set title = 'Фотографии' %}
+
+{% block header %}
+  <h1 class="data-heading">
+    Фотографии пользователей
+  </h1>
+{% endblock %}
+
+{% block main %}
+  <section class="data">
+    <h2 class="visually-hidden">Раздел с фотографиями пользователей.</h2>
+    <b class="data__text data__text--catalog">
+      Взгляните на фотографии, которые выкладывают пользователи! Видите,как&nbsp;не хватает ваших?
+    </b>
+    <ul class="photos">
+      <li class="photos__item photos__item--panorama">
+        <span class="photos__mark">
+          Панорама дня
+        </span>
+        <picture class="picture photos__picture photos__picture--panorama">
+          <source media="(min-width:660px)" srcset="https://via.placeholder.com/660x509">
+          <img class="picture__image" src="https://via.placeholder.com/320x137" alt="Фотография Вид с моста.">
+        </picture>
+        <blockquote class="photos__quote">
+          <div class="photos__quote-wrapper photos__quote-wrapper--panorama">
+            <p class="photos__author-profile">
+              <cite class="photos__author-name">
+                Анна
+              </cite>
+              <time class="photos__time" datetime="2022">
+                (5 минут назад)
+              </time>
+            </p>
+            <p class="photos__author-text">
+              Прыгать или нет? Напишите в комментарии свой совет
+              и смотрите&nbsp;прямую трансляцию в перископе, задавайте
+              свои вопросы!
+            </p>
+            <span class="photos__like photos__like--panorama">
+              Нравится: 215
+            </span>
+          </div>
+        </blockquote>
+        <form class="form photos__form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="hidden" name="photo" value="catalog-panorama">
+          <button class="photos__button" type="submit" name="user" value="username">
+            <span class="visually-hidden">
+              Поставить лайк.
+            </span>
+          </button>
+        </form>
+      </li>
+      <li class="photos__item">
+        <picture class="picture photos__picture">
+          <source media="(min-width:660px)" srcset="https://via.placeholder.com/300x300">
+          <img class="picture__image" src="https://via.placeholder.com/280x180" alt="Фотография автомобиль вид сбоку.">
+        </picture>
+        <blockquote class="photos__quote">
+          <div class="photos__quote-wrapper">
+            <p class="photos__author-profile">
+              <cite class="photos__author-name">
+                Левон
+              </cite>
+              <time class="photos__time" datetime="2022">
+                (5 часов назад)
+              </time>
+            </p>
+            <p class="photos__author-text">
+              Вчера он на луну летал, сегодня в руки к нам попал.
+            </p>
+            <span class="photos__like">
+              Нравится: 356
+            </span>
+          </div>
+        </blockquote>
+        <form class="form photos__form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="hidden" name="photo" value="catalog-auto">
+          <button class="photos__button" type="submit" name="user" value="username">
+            <span class="visually-hidden">
+              Поставить лайк.
+            </span>
+          </button>
+        </form>
+      </li>
+      <li class="photos__item">
+        <picture class="picture photos__picture">
+          <source media="(min-width:660px)" srcset="https://via.placeholder.com/300x300">
+          <img class="picture__image" src="https://via.placeholder.com/280x180" alt="Фотография барабаны.">
+        </picture>
+        <blockquote class="photos__quote">
+          <div class="photos__quote-wrapper">
+            <p class="photos__author-profile">
+              <cite class="photos__author-name">
+                Антон
+              </cite>
+              <time class="photos__time" datetime="2022">
+                (12 часов назад)
+              </time>
+            </p>
+            <p class="photos__author-text">
+              Соседи будут рады!
+            </p>
+            <span class="photos__like">
+              Нравится: 666
+            </span>
+          </div>
+        </blockquote>
+        <form class="form photos__form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="hidden" name="photo" value="catalog-drums">
+          <button class="photos__button" type="submit" name="user" value="username">
+            <span class="visually-hidden">
+              Поставить лайк.
+            </span>
+          </button>
+        </form>
+      </li>
+      <li class="photos__item">
+        <picture class="picture photos__picture">
+          <source media="(min-width:660px)" srcset="https://via.placeholder.com/300x300">
+          <img class="picture__image" src="https://via.placeholder.com/280x180" alt="Фотография современный интерьер помещения.">
+        </picture>
+        <blockquote class="photos__quote">
+          <div class="photos__quote-wrapper">
+            <p class="photos__author-profile">
+              <cite class="photos__author-name">
+                Борис
+              </cite>
+              <time class="photos__time" datetime="2022">
+                (20 часов назад)
+              </time>
+            </p>
+            <p class="photos__author-text">
+              Здесь могла быть ваша цитата о высоком и вечном.
+            </p>
+            <span class="photos__like">
+              Нравится: 215
+            </span>
+          </div>
+        </blockquote>
+        <form class="form photos__form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="hidden" name="photo" value="catalog-windows">
+          <button class="photos__button" type="submit" name="user" value="username">
+            <span class="visually-hidden">
+              Поставить лайк.
+            </span>
+          </button>
+        </form>
+      </li>
+      <li class="photos__item">
+        <picture class="picture photos__picture">
+          <source media="(min-width:660px)" srcset="https://via.placeholder.com/300x300">
+          <img class="picture__image" src="https://via.placeholder.com/280x180" alt="Фотография Кубанская Бахча.">
+        </picture>
+        <blockquote class="photos__quote">
+          <div class="photos__quote-wrapper">
+            <p class="photos__author-profile">
+              <cite class="photos__author-name">
+                Сергей
+              </cite>
+              <time class="photos__time" datetime="2022">
+                (25 часов назад)
+              </time>
+            </p>
+            <p class="photos__author-text">
+              Самая кубанская в мире!
+            </p>
+            <span class="photos__like">
+              Нравится: 4
+            </span>
+          </div>
+        </blockquote>
+        <form class="form photos__form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="hidden" name="photo" value="catalog-fair">
+          <button class="photos__button" type="submit" name="user" value="username">
+            <span class="visually-hidden">
+              Поставить лайк.
+            </span>
+          </button>
+        </form>
+      </li>
+      <li class="photos__item">
+        <picture class="picture photos__picture">
+          <source media="(min-width:660px)" srcset="https://via.placeholder.com/300x300">
+          <img class="picture__image" src="https://via.placeholder.com/280x180" alt="Фотография виды в горах.">
+        </picture>
+        <blockquote class="photos__quote">
+          <div class="photos__quote-wrapper">
+            <p class="photos__author-profile">
+              <cite class="photos__author-name">
+                Максим
+              </cite>
+              <time class="photos__time" datetime="2022">
+                (40 часов назад)
+              </time>
+            </p>
+            <p class="photos__author-text">
+              Где снег-то?
+            </p>
+            <span class="photos__like">
+              Нравится: 150
+            </span>
+          </div>
+        </blockquote>
+        <form class="form photos__form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="hidden" name="photo" value="catalog-view">
+          <button class="photos__button" type="submit" name="user" value="username">
+            <span class="visually-hidden">
+              Поставить лайк.
+            </span>
+          </button>
+        </form>
+      </li>
+      <li class="photos__item">
+        <picture class="picture photos__picture">
+          <source media="(min-width:660px)" srcset="https://via.placeholder.com/300x300">
+          <img class="picture__image" src="https://via.placeholder.com/280x180" alt="Фотография вид из самолета.">
+        </picture>
+        <blockquote class="photos__quote">
+          <div class="photos__quote-wrapper">
+            <p class="photos__author-profile">
+              <cite class="photos__author-name">
+                Надежда
+              </cite>
+              <time class="photos__time" datetime="2022">
+                (45 часов назад)
+              </time>
+            </p>
+            <p class="photos__author-text">
+              Всем GM и взаимные лайки!
+            </p>
+            <span class="photos__like">
+              Нравится: 2560
+            </span>
+          </div>
+        </blockquote>
+        <form class="form photos__form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="hidden" name="photo" value="catalog-fly">
+          <button class="photos__button" type="submit" name="user" value="username">
+            <span class="visually-hidden">
+              Поставить лайк.
+            </span>
+          </button>
+        </form>
+      </li>
+    </ul>
+  </section>
+
+  <section class="upload">
+    <h2 class="visually-hidden">Раздел редактирования и загрузки фотографий.</h2>
+    <p class="upload__text-wrapper">
+      <b class="upload__text">
+        Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!
+      </b>
+    </p>
+    <div class="upload__wrapper">
+      <img class="upload__img" src="https://via.placeholder.com/280x374" alt="Пример редактирования фото">
+      <form class="upload__editing" action="https://echo.htmlacademy.ru/courses" method="get">
+        <p class="upload__file">
+          <label class="visually-hidden" for="file" aria-label="Выберите файл"></label>
+          <input class="visually-hidden" name="file" id="file" type="file" accept="image/jpeg, image/png">
+        </p>
+        <ul class="upload__buttons-edit">
+          <li class="upload__item upload__item--active">
+            <button class="upload__button-edit upload__button-edit--crop" aria-label="Обрезка фотографии." type="button"></button>
+            <label class="upload__label">
+              <span class="visually-hidden">
+                Обрезка фотографии.
+              </span>
+              <input class="upload__range upload__range--crop " type="range" name="image-crop" min="0" max="100" value="85" step="1">
+            </label>
+          </li>
+          <li class="upload__item">
+            <button class="upload__button-edit upload__button-edit--brightness" aria-label="Регулировка яркости на фотографии." type="button"></button>
+            <label class="upload__label">
+              <span class="visually-hidden">
+                Регулировка яркости на фотографии.
+              </span>
+              <input class="upload__range upload__range--brightness " type="range" name="image-brightness" min="0" max="100" value="20" step="1">
+            </label>
+          </li>
+          <li class="upload__item">
+            <button class="upload__button-edit upload__button-edit--contrast" aria-label="Регулировка контрасности на фотографии." type="button"></button>
+            <label class="upload__label">
+              <span class="visually-hidden">
+                Регулировка контрасности на фотографии.
+              </span>
+              <input class="upload__range upload__range--contrast" type="range" name="image-contrast" min="0" max="100" value="50" step="1">
+            </label>
+          </li>
+        </ul>
+        <p class="upload__buttons">
+          <button class="upload__button" type="submit">
+            Запостить
+          </button>
+          <button class="upload__button upload__button--reset" type="reset">
+            Отмена
+          </button>
+        </p>
+      </form>
+    </div>
+  </section>
+
+{% endblock %}

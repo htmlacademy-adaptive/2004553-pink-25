@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк &gt; {{ title }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page">
+    <header class="page-header page__header">
+      <div class="header-top">
+        <div class="page-header__wrapper">
+          <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+            <img class="logo__image" src="img/logo-pink.svg" alt="Логотип Pink">
+          </a>
+          <button class="nav-button" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+        </div>
+        <nav class="nav page-header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link {{ 'nav__link--current' if page == 'index' }}" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+                Главная
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link {{ 'nav__link--current' if page == 'catalog' }}" href="catalog.html" {{ 'aria-current="page"' if page == 'catalog' }}>
+                Фотографии
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link {{ 'nav__link--current' if page == 'form' }}" href="form.html" {{ 'aria-current="page"' if page == 'form' }}>
+                Конкурс
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="https://htmlacademy.ru">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      {% block header %}
+        <div class="container">
+          <p class="header-bottom">
+            <b class="header-bottom__text">
+              Взгляните на&nbsp;жизнь иначе!
+            </b>
+            <picture class="header-bottom-picture">
+              <source media="(min-width:660px)" srcset="img/index/promo-tablet.png">
+              <img class="header-bottom-image" src="img/index/promo-app.png" alt="Фотография работа приложения">
+            </picture>
+          </p>
+          <section class="promo">
+            <div class="promo__wrapper-bottom">
+              <h1 class="visually-hidden">Приложение "Пинк".</h1>
+              <a href="https://www.apple.com/ru/app-store/" class="promo__download-link">
+                Скачать приложение
+              </a>
+              <ul class="promo__app-list">
+                <li class="promo__app-item">
+                  <a href="https://www.apple.com/ru/app-store/" class="promo__app-link promo__app-link--apple">
+                    <span class="visually-hidden">Магазин приложений "Эпл".</span>
+                  </a>
+                </li>
+                <li class="promo__app-item">
+                  <a href="https://play.google.com/" class="promo__app-link promo__app-link--android">
+                    <span class="visually-hidden">Магазин приложений "Гугл".</span>
+                  </a>
+                </li>
+                <li class="promo__app-item">
+                  <a href="https://www.microsoft.com/ru-ru/store/apps/windows" class="promo__app-link promo__app-link--windows">
+                    <span class="visually-hidden">Магазин приложений "Майкрософт".</span>
+                  </a>
+                </li>
+              </ul>
+              <em class="promo__remark">
+                Доступно для iPhone, iPad, Android, <br> Windows Phone, OS X, Windows&nbsp;8
+              </em>
+            </div>
+          </section>
+        </div>
+
+      {% endblock %}
+    </header>
+
+    <main class="page-main page__main">
+      {% block main %}{% endblock %}
+    </main>
+
+    <footer class="page-footer page__footer">
+      <div class="container container__footer">
+        <a class="logo page-footer__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+          <img class="logo__image logo__image--footer" src="../img/svg-icon/footer-logo.svg" alt="Логотип Pink.">
+        </a>
+
+        <ul class="socials page-footer__socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="#!">
+              <span class="visually-hidden">Vkontakte.</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--telegram" href="#!">
+              <span class="visually-hidden">Telegram.</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="#!">
+              <span class="visually-hidden">Youtube.</span>
+            </a>
+          </li>
+        </ul>
+
+        <a class="logo-dev page-footer__logo-dev" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="page-footer-text">
+            Разработано
+          </span>
+          <img class="logo-dev__image" src="../img/svg-icon/html-academy.svg" width="27" height="34" alt="HTML Academy.">
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      window.pinegladePP = {
+        breakpoints: [320, 660, 1200]
+      };
+    </script>
+    <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>
+
+  </body>
+</html>
