@@ -12,8 +12,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 96px 0 0;
-    padding: 0 19px;
-    column-gap: 27px;
+    padding: 0;
+    column-gap: 29px;
   }
 }
 
@@ -115,66 +115,73 @@
   }
 }
 
-.offer__blurb {
-  display: none;
-  background-color: var(--color-white);
+.offer__wrapper {
+  background-color: var(--color-gray-light);
 
   @media @tablet {
-    position: relative;
-    display: block;
-    margin-top: -74px;
-    padding: 96px 22px 122px 330px;
+    padding: 0 20px 80px;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 54px;
-      left: 20px;
-      display: block;
-      width: 238px;
-      height: 276px;
-      background-image: url("../img/index/timer.svg");
+  @media @desktop {
+    padding: 0 20px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 33px;
+    margin: 0 0 51px;
+    background-color: var(--color-white);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+
+    @media @tablet {
+      height: 51px;
+      margin: 0 -30px 24px;
+    }
+
+    @media @desktop {
+      height: 103px;
+      margin: 0;
     }
   }
+}
+
+.offer__motto {
+  padding: 29px 20px 0;
+
+  @media @tablet {
+    padding: 33px 20px 0;
+  }
 
   @media @desktop {
-    display: block;
-    margin-top: 0;
-    padding: 0;
-    background-color: var(--color-gray-light);
+    margin: 0;
+    padding: 61px 20px 51px;
   }
 }
 
-.blurb__heading {
-  margin: 0 0 10px;
-  padding-right: 11px;
-  font-size: 30px;
-  line-height: 36px;
+.offer__motto-text {
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
 
+  @media @tablet {
+    margin: 0;
+    font-size: 40px;
+    line-height: 54px;
+  }
 
   @media @desktop {
-    margin: 0 0 22px;
+    margin: 0;
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 
-.blurb__text {
-  margin: 0 0 10px;
-  line-height: 24px;
-  color: var(--color-dark-blue);
-
-  @media @desktop {
-    margin: 0 0 31px;
-    font-size: 18px;
-    line-height: 30px;
-  }
-}
-
-.blurb__link {
-  line-height: 24px;
-  color: var(--color-pink);
-
-  @media @desktop {
-    font-size: 18px;
-    line-height: 30px;
+.offer__motto-text--down {
+  @media @tablet {
+    margin-bottom: 30px;
   }
 }
