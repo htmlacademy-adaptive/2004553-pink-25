@@ -91,8 +91,19 @@
   line-height: 18px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: var(--color-pink);
+  background-color: transparent;
   border: 3px solid var(--color-pink);
   border-radius: 30px;
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-pink);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var(--color-pink);
+  }
 
   @media @tablet {
     width: 260px;
@@ -104,11 +115,23 @@
     margin-left: -10px;
     padding: 15px 10px 16px;
   }
-}
 
-.upload__button--reset {
-  color: rgba(40, 54, 69, 0.1);
-  border: 3px solid rgba(40, 54, 69, 0.1);
+  &--reset {
+    color: var(--color-dark-blue-10);
+    border: 3px solid var(--color-dark-blue-10);
+
+    &:hover {
+      color: var(--color-dark-blue-30);
+      background-color: transparent;
+      border: 3px solid var(--color-dark-blue-30);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: var(--color-dark-blue-30);
+      border: transparent;
+    }
+  }
 }
 
 .upload__label {
@@ -212,6 +235,10 @@
   background-color: transparent;
   border: none;
 
+  &:hover::before {
+    background-color: rgba(40, 54, 69, 0.5);
+  }
+
   &::before {
     content: "";
     display: block;
@@ -260,7 +287,7 @@
     &::before {
       width: 48px;
       height: 43px;
-      mask-image: url("..//..//img/svg-icon/catalog/fill.svg");
+      mask-image: url("../img/svg-icon/catalog/fill.svg");
     }
 
     @media @tablet {
@@ -374,6 +401,10 @@
   border-radius: 50%;
   cursor: pointer;
   appearance: none;
+
+  &:active {
+    background-color: var(--color-pink);
+  }
 }
 
 .upload__range::-moz-range-track {

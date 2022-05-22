@@ -1,13 +1,15 @@
 .blurb {
+  position: relative;
   display: none;
   background-color: var(--color-white);
 
   @media @tablet {
-    position: relative;
     display: block;
     margin-top: -74px;
     padding: 96px 22px 122px 330px;
+  }
 
+  @media @tablet-desktop {
     &::before {
       content: "";
       position: absolute;
@@ -17,6 +19,7 @@
       width: 238px;
       height: 276px;
       background-image: url("../img/index/timer.svg");
+      background-repeat: no-repeat;
     }
   }
 
@@ -25,25 +28,22 @@
     margin-top: 0;
     padding: 0;
     background-color: var(--color-gray-light);
+
+    &::before {
+      content: "";
+      top: 68px;
+      left: 131px;
+      width: 298px;
+      height: 345px;
+      background-size: 298px 345px;
+    }
   }
 }
 
 .blurb__container {
   @media @desktop {
-    position: relative;
     box-sizing: border-box;
     padding: 160px 40px 111px 370px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 68px;
-      left: 1px;
-      display: block;
-      width: 298px;
-      height: 345px;
-      background-image: url("../img/index/timer-big.svg");
-    }
   }
 }
 
