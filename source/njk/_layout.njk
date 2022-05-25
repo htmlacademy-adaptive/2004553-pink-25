@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк &gt; {{ title }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png">
+    <link rel="manifest" href="favicons.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
@@ -48,9 +53,10 @@
             <b class="header-bottom__text">
               Взгляните на&nbsp;жизнь иначе!
             </b>
-            <picture class="header-bottom-picture">
-              <source media="(min-width:660px)" srcset="img/index/promo-tablet.png">
-              <img class="header-bottom__image" src="img/index/promo-app.png" alt="Фотография работа приложения">
+            <picture>
+              <source media="(min-width:940px)" srcset="img/index/promo-desktop.png 1x, img/index/promo-desktop@2x.png 2x">
+              <source media="(min-width:660px)" srcset="img/index/promo-tablet.png 1x, img/index/promo-tablet@2x.png 2x">
+              <img class="header-bottom__image" src="img/index/promo-app.png" srcset="img/index/promo-app@2x.png 2x" alt="Фотография работа приложения">
             </picture>
           </p>
           <section class="promo">
@@ -130,5 +136,6 @@
     </script>
     <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>
 
+    <script src="js/nav.js"></script>
   </body>
 </html>

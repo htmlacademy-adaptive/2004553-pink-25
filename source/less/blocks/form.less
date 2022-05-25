@@ -71,9 +71,10 @@
     @media @desktop {
       display: grid;
       grid-column: 1/-1;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, auto);
       margin-bottom: 57px;
       padding: 41px 29px 8px 60px;
+      column-gap: 31px;
     }
   }
 
@@ -168,6 +169,15 @@
   font-style: normal;
   border: 2px solid var(--color-gray);
   border-radius: 1px;
+  appearance: none;
+
+  &:hover {
+    border: 2px solid  var(--color-dark-blue);
+  }
+
+  &:active {
+    border: 2px solid  var(--color-pink);
+  }
 
   &--message {
     height: 201px;
@@ -280,22 +290,22 @@
 
     &:nth-child(4) {
       order: 2;
-      margin: 0 0 52px 66px;
+      // margin: 0 0 52px 66px;
     }
 
     &:nth-child(5) {
       order: 5;
-      margin: 0 0 22px 66px;
+      // margin: 0 0 22px 66px;
     }
 
     &:nth-child(6) {
       order: 3;
-      margin: 0 0 52px 78px;
+      // margin: 0 0 52px 78px;
     }
 
     &:nth-child(7) {
       order: 6;
-      margin: 0 0 21px 78px;
+      // margin: 0 0 21px 78px;
     }
   }
 
@@ -315,7 +325,6 @@
 
       &:nth-child(4) {
         order: 3;
-        margin: 0 0 48px 105px;
       }
     }
   }
@@ -386,12 +395,22 @@
   color: var(--color-white);
   text-transform: uppercase;
   background-color: #2aab6d;
-  border: 2px solid #2aab6d;
+  border: 2px solid transparent;
   border-radius: 1px;
 
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #1c9b5e;
+  }
+
   @media @tablet-desktop {
+    flex-shrink: 0;
     width: 301px;
-    margin: 0;
+    margin: 0 50px 0 0;
   }
 }
 
@@ -415,6 +434,7 @@
 .form__field-group {
   @media @tablet-desktop {
     display: flex;
+    align-items: flex-start;
     margin-bottom: 50px;
   }
 }
@@ -431,16 +451,17 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 29px;
 
     &::before {
       content: "";
       position: absolute;
       top: 2px;
-      right: 1px;
+      right: 2px;
       display: block;
-      width: 62px;
-      height: 62px;
+      width: 61px;
+      height: 61px;
       background-color: var(--color-gray);
     }
 

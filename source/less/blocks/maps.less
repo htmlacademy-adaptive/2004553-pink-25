@@ -5,9 +5,19 @@
   background-repeat: no-repeat;
   background-size: 100%;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/map@2x.png");
+    background-size: 100% auto;
+  }
+
   @media @tablet {
     height: 373px;
     background-image: url("../img/index/map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/map-tablet@2x.png");
+      background-size: 100% auto;
+    }
   }
 
   &::before {
@@ -30,5 +40,10 @@
   @media @desktop {
     height: 502px;
     background-image: url("../img/index/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/map-desktop@2x.png");
+      background-size: 100% auto;
+    }
   }
 }
