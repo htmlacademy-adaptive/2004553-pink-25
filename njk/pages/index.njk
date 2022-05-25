@@ -27,9 +27,8 @@
             и депрессию буквально в несколько кликов!
           </p>
             <picture class="offer__picture">
-              <source media="(min-width:980px)" srcset="img/index/feauters-1.png">
-              <source media="(min-width:660px)" srcset="img/index/offer-tablet.png">
-              <img class="offer__image" src="img/index/hello-app.png" alt="Пример работы приложения.">
+              <source media="(min-width:980px)"  srcset="img/index/phone-feature-1-desktop.png 1x, img/index/phone-feature-1-desktop@2x.png 2x">
+              <img class="offer__image"  src="img/index/phone-feature-1-mobile.png" alt="Пример работы приложения.">
             </picture>
           </li>
           <li class="offer__item">
@@ -41,9 +40,8 @@
             или&nbsp;текстовой подписью, чтобы усилить&nbsp;эффект
           </p>
             <picture class="offer__picture">
-              <source media="(min-width:980px)" srcset="img/index/feauters-2.png">
-              <source media="(min-width:660px)" srcset="img/index/offer-tablet.png">
-              <img class="offer__image" src="img/index/hello-app.png" alt="Пример работы приложения.">
+              <source media="(min-width:940px)" srcset="img/index/phone-feature-2-desktop.png 1x, img/index/phone-feature-2-desktop@2x.png 2x">
+              <img class="offer__image" src="img/index/phone-feature-2-mobile.png" alt="Пример работы приложения.">
             </picture>
           </li>
           <li class="offer__item">
@@ -55,16 +53,16 @@
             делитесь фотографиями с друзьями и&nbsp;заводите новых
           </p>
             <picture class="offer__picture">
-              <source media="(min-width:980px)" srcset="img/index/feauters-3.png">
-              <source media="(min-width:660px)" srcset="img/index/offer-tablet.png">
-              <img class="offer__image offer__image-mobile" src="img/index/hello-app.png" alt="Пример работы приложения.">
+              <source media="(min-width:940px)" srcset="img/index/phone-feature-3-desktop.png 1x, img/index/phone-feature-3-desktop@2x.png 2x">
+              <source media="(min-width:660px)" srcset="img/index/phone-feature-3-tablet.png 1x, img/index/phone-feature-3-tablet@2x.png 2x">
+              <img class="offer__image offer__image-mobile" src="img/index/phone-feature-3-mobile.png" srcset="img/index/phone-feature-3-mobile@2x.png 2x" alt="Пример работы приложения.">
             </picture>
           </li>
         </ul>
       </div>
     </div>
     <div class="blurb">
-      <div class="container  blurb__container">
+      <div class="container blurb__container">
         <h3 class="blurb__heading">
           <strong>
             Эффект на&nbsp;24&nbsp;часа!
@@ -117,9 +115,7 @@
   <section class="tariffs">
     <div class="tariffs-wrapper">
       <h2 class="visually-hidden">Тарифы.</h2>
-      {# Временно отключу демонстрацию для JS разработчика #}
-      {# style="transform: translateX(-404px);" #}
-      <table class="tariffs__table">
+      <table class="tariffs__table" style="transform: var(--table-transform);">
         <thead class="tariffs__table-head">
           <tr class="tariffs__table-row">
             <th class="tariffs__head tariffs__head--hidden" scope="col">
