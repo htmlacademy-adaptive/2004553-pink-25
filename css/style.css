@@ -33,8 +33,6 @@
   --color-black-blue: #1d2631;
   --color-gray-light: #f2f2f2;
   --color-gray: #e5e5e5;
-  --table-transform: translateX(-404px);
-  --table-transform-none: none;
   min-width: 320px;
   font-size: 14px;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -117,9 +115,15 @@ a {
     background-size: 100% auto;
   }
 }
+@media (min-width: 660px) and (max-width: 979px) {
+  .page-header__logo {
+    margin-top: -13px;
+  }
+}
 @media (min-width: 980px) {
   .page-header__logo {
-    margin-right: 50px;
+    display: block;
+    margin: -18px 50px 0 0;
   }
 }
 @media (max-width: 979px) {
@@ -138,8 +142,10 @@ a {
     right: 0;
   }
 }
-.page-header--js .page-header__wrapper {
-  background-color: var(--color-black-30);
+@media (max-width: 979px) {
+  .page-header--js .page-header__wrapper {
+    background-color: var(--color-black-30);
+  }
 }
 @media (max-width: 979px) {
   .page-header--js .nav-button {
@@ -154,7 +160,7 @@ a {
 @media (max-width: 979px) {
   .page-header--opened .page-header__nav {
     position: absolute;
-    top: 64px;
+    top: 61px;
     left: 0;
     display: block;
     width: 100%;
@@ -177,10 +183,10 @@ a {
   }
 }
 @media (max-width: 979px) {
-  .page-header--opened .nav-button {
+  .page-header--opened .page-header__nav-button {
     display: block;
   }
-  .page-header--opened .nav-button::before {
+  .page-header--opened .page-header__nav-button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -383,15 +389,15 @@ a {
   background-repeat: no-repeat;
 }
 .promo__app-link--apple {
-  background-image: url("/img/app-logo/apple-logo.svg");
+  background-image: url("../img/app-logo/apple-logo.svg");
   background-position: 84% 13%;
 }
 .promo__app-link--android {
-  background-image: url("/img/app-logo/android-logo.svg");
+  background-image: url("../img/app-logo/android-logo.svg");
   background-position: 76% 86%;
 }
 .promo__app-link--windows {
-  background-image: url("/img/app-logo/microsoft-logo.svg");
+  background-image: url("../img/app-logo/microsoft-logo.svg");
   background-position: 50% 90%;
 }
 .promo__remark {
@@ -570,7 +576,7 @@ a {
 @media (min-width: 980px) {
   .offer__wrapper::before {
     height: 103px;
-    margin: 0;
+    margin: 0 -20px 24px;
   }
 }
 .offer__motto {
@@ -1530,6 +1536,11 @@ a {
   margin: 0 auto;
   border-collapse: collapse;
 }
+@media (max-width:659px) {
+  .tariffs__table {
+    transform: var(--table-transform);
+  }
+}
 @media (min-width: 660px) and (max-width: 979px) {
   .tariffs__table {
     margin: 0 auto 67px;
@@ -1728,7 +1739,7 @@ a {
 }
 .page-footer__logo-dev {
   display: flex;
-  align-items: center;
+  padding-top: 9px;
   font-size: 14px;
   line-height: 18px;
   color: var(--color-dark-blue);
@@ -1752,23 +1763,50 @@ a {
   }
 }
 .page-footer__logo {
-  margin-bottom: 40px;
+  fill: var(--color-dark-blue);
 }
-@media (min-width: 660px) {
-  .page-footer__logo {
-    margin: 0;
+.page-footer__logo:hover {
+  fill: var(--color-pink);
+}
+.page-footer__logo:active {
+  fill: var(--color-dark-blue-30);
+}
+.page-footer__logo--mobile {
+  display: none;
+}
+@media (max-width:659px) {
+  .page-footer__logo--mobile {
+    display: block;
+    margin-bottom: 40px;
   }
+}
+.page-footer__logo--tablet {
+  display: none;
 }
 @media (min-width: 660px) and (max-width: 979px) {
-  .page-footer__logo {
-    padding: 0 20px 13px;
+  .page-footer__logo--tablet {
+    display: block;
+    margin: -10px 0 0 19px;
   }
 }
+.page-footer__logo--desktop {
+  display: none;
+}
 @media (min-width: 980px) {
-  .page-footer__logo {
-    margin-top: -29px;
-    padding: 0 2px 0;
+  .page-footer__logo--desktop {
+    display: block;
+    margin-top: -28px;
   }
+}
+.page-footer__logo-icon {
+  margin: -9px 0 0 16px;
+  fill: var(--color-pink);
+}
+.page-footer__logo-icon:hover {
+  fill: var(--color-dark-blue);
+}
+.page-footer__logo-icon:active {
+  fill: var(--color-dark-blue-30);
 }
 .page-footer__container {
   display: flex;
@@ -1838,11 +1876,38 @@ a {
 .logo-dev__image {
   margin-left: 16px;
 }
-.logo__image {
-  background-color: transparent;
+.logo {
+  fill: var(--color-white);
 }
-.logo__image:hover {
+.logo:hover:not(:active) {
   fill: var(--color-pink);
+}
+.logo:active {
+  opacity: 0.3;
+}
+.logo--mobile {
+  display: none;
+}
+@media (max-width:659px) {
+  .logo--mobile {
+    display: block;
+  }
+}
+.logo--tablet {
+  display: none;
+}
+@media (min-width: 660px) and (max-width: 979px) {
+  .logo--tablet {
+    display: block;
+  }
+}
+.logo--desktop {
+  display: none;
+}
+@media (min-width: 980px) {
+  .logo--desktop {
+    display: block;
+  }
 }
 .maps {
   height: 200px;
@@ -2523,7 +2588,7 @@ a {
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 17px;
+  padding: 20px 20px;
   background-color: var(--color-dark-blue);
 }
 @media (min-width: 660px) and (max-width: 979px) {
@@ -2716,19 +2781,6 @@ a {
     padding: 96px 22px 122px 330px;
   }
 }
-@media (min-width: 660px) {
-  .blurb::before {
-    content: "";
-    position: absolute;
-    top: 54px;
-    left: 20px;
-    display: block;
-    width: 238px;
-    height: 276px;
-    background-image: url("../img/index/timer.svg");
-    background-repeat: no-repeat;
-  }
-}
 @media (min-width: 980px) {
   .blurb {
     display: block;
@@ -2736,19 +2788,37 @@ a {
     padding: 0;
     background-color: var(--color-gray-light);
   }
-  .blurb::before {
-    content: "";
-    top: 68px;
-    left: 131px;
-    width: 298px;
-    height: 345px;
-    background-size: 298px 345px;
-  }
+}
+.blurb__container {
+  position: relative;
 }
 @media (min-width: 980px) {
   .blurb__container {
     box-sizing: border-box;
     padding: 160px 40px 111px 370px;
+  }
+}
+@media (min-width: 660px) {
+  .blurb__container::before {
+    content: "";
+    position: absolute;
+    top: -42px;
+    left: -310px;
+    display: block;
+    width: 238px;
+    height: 276px;
+    background-image: url("../img/index/timer.svg");
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 660px) and (min-width: 980px) {
+  .blurb__container::before {
+    content: "";
+    top: 68px;
+    left: 1px;
+    width: 298px;
+    height: 345px;
+    background-size: 298px 345px;
   }
 }
 .blurb__heading {
