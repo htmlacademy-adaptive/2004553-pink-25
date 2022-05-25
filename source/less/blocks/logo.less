@@ -6,10 +6,38 @@
   margin-left: 16px;
 }
 
-.logo__image {
-  background-color: transparent;
+.logo {
+  fill: var(--color-white);
 
-  &:hover {
+  &:hover:not(:active) {
     fill: var(--color-pink);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--mobile {
+    display: none;
+
+    @media @mobile {
+      display: block;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media @tablet {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media @desktop {
+      display: block;
+    }
   }
 }
