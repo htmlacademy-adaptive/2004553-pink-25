@@ -44,11 +44,6 @@ const jsSources = [
 ];
 const staticSources = ['source/static/**/*', '!source/static/**/*.md', '!source/static/**/README'];
 
-if (!IS_DEV) {
-  staticSources.push('!source/static/pixelperfect/**/*');
-  staticSources.push('!source/static/js/dev.js');
-}
-
 export const testHTML = () => src('source/njk/pages/**/*.njk')
   .pipe(posthtml())
   .pipe(bemValidator())
@@ -127,7 +122,6 @@ export const copyStatic = () => src(staticSources)
   .pipe(dest('build'));
 
 export const cleanDestination = () => del('build');
-export const cleanDestinationAfter = () => del('build/pixelperfect');
 
 const reload = (done) => {
   browser.reload();
@@ -137,6 +131,7 @@ const reload = (done) => {
 const watcher = () => {
   watch(editorconfigSources, series(testEditorconfig, buildHTML, reload));
   watch('source/less/**/*.less', series(testStyles, buildStyles, reload));
+  watch('source/img/**/*.{svg,png,jpg}', series(optimizeImages, reload));
   watch('source/sprite/**/*.svg', series(buildSprite, reload));
   watch(staticSources, series(copyStatic, reload));
   watch(jsSources, series(testScripts, reload));
@@ -146,10 +141,6 @@ const compilationTasks = [
   cleanDestination,
   parallel(buildHTML, buildStyles, buildSprite, optimizeImages, copyStatic)
 ];
-if (!IS_DEV) {
-  compilationTasks.push(cleanDestinationAfter);
-}
-
 export const test = parallel(testHTML, testEditorconfig, testStyles, testScripts);
 export const build = series(...compilationTasks);
 export default series(test, build, server, watcher);

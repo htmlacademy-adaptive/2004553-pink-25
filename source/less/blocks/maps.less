@@ -3,7 +3,7 @@
   background-color: var(--color-gray);
   background-image: url("../img/index/map.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-position: 50%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/index/map@2x.png");
@@ -16,7 +16,15 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index/map-tablet@2x.png");
-      background-size: 100% auto;
+    }
+  }
+
+  @media @desktop {
+    height: 502px;
+    background-image: url("../img/index/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/map-desktop@2x.png");
     }
   }
 
@@ -34,16 +42,6 @@
 
     @media @desktop {
       height: 206px;
-    }
-  }
-
-  @media @desktop {
-    height: 502px;
-    background-image: url("../img/index/map-desktop.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/index/map-desktop@2x.png");
-      background-size: 100% auto;
     }
   }
 }

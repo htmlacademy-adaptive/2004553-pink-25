@@ -94,22 +94,21 @@
   }
 
   &--text {
-    padding: 38px 18px 44px;
+    padding: 38px 18px 47px;
 
     @media @tablet-desktop {
       order: 5;
       margin-bottom: 65px;
-      padding: 38px 58px 47px;
+      padding: 38px 58px 50px;
       border: 2px solid var(--color-gray);
     }
 
     @media @desktop {
       grid-column: 1/-1;
       margin-bottom: 46px;
-      padding: 0 56px 39px;
+      padding: 0 56px 42px;
     }
   }
-
 
   &--contacts {
     padding: 16px 18px 41px;
@@ -166,6 +165,7 @@
   font-size: 18px;
   line-height: 30px;
   font-family: inherit;
+  color: inherit;
   font-style: normal;
   border: 2px solid var(--color-gray);
   border-radius: 1px;
@@ -192,6 +192,11 @@
       height: 128px;
     }
   }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
 }
 
 .form__legend {
@@ -203,17 +208,21 @@
   color: var(--color-pink);
   text-transform: uppercase;
 
+  @media @tablet-desktop {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &--checker {
     @media @tablet-desktop {
       display: block;
-      float: none;
       width: 87%;
       margin-bottom: 7px;
     }
 
     @media @desktop {
       width: 51%;
-      margin: 0 0 7px -16px;
     }
   }
 
@@ -223,7 +232,6 @@
     @media @tablet-desktop {
       position: relative;
       display: block;
-      float: none;
       width: 51%;
       margin-bottom: 19px;
     }
@@ -238,24 +246,21 @@
     margin-bottom: 38px;
 
     @media @tablet-desktop {
-      float: none;
       width: 74%;
       margin-bottom: 47px;
     }
 
     @media @desktop {
-      float: none;
       width: 84%;
     }
   }
 
   &--text {
-    margin: 0 0 16px 0;
+    margin-bottom: 16px;
 
     @media @tablet-desktop {
-      float: none;
       width: 51%;
-      margin: 0;
+      margin-bottom: -2px;
     }
 
     @media @desktop {
@@ -271,7 +276,6 @@
   padding: 0;
   font-size: 18px;
   line-height: 30px;
-  color: var(--color-dark-blue);
 
   @media @mobile-tablet {
     &:last-of-type {
@@ -392,6 +396,7 @@
   padding: 20px 20px 18px;
   font-weight: 700;
   font-size: 18px;
+  font-family: inherit;
   color: var(--color-white);
   text-transform: uppercase;
   background-color: #2aab6d;
